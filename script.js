@@ -5,10 +5,11 @@ const PHONE_E164 = "+14062038740";
 document.querySelectorAll(".js-tel").forEach((a) => (a.href = `tel:${PHONE_E164}`));
 document.querySelectorAll(".js-sms").forEach((a) => (a.href = `sms:${PHONE_E164}`));
 document.querySelectorAll(".js-phone").forEach((el) => (el.textContent = PHONE_DISPLAY));
-document.getElementById("year").textContent = new Date().getFullYear();
+const year = document.getElementById("year");
+if (year) year.textContent = new Date().getFullYear();
 
 // "Request a demo" builds a text message instead of posting to a server.
-document.getElementById("demo-form").addEventListener("submit", (e) => {
+document.getElementById("demo-form")?.addEventListener("submit", (e) => {
   e.preventDefault();
   const f = new FormData(e.target);
   const body =
@@ -34,15 +35,17 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
 document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
-// Video modal with YouTube's privacy-enhanced embed.
+// Video modal with YouTube's privacy-enhanced embed (details page only).
 const modal = document.getElementById("video-modal");
-const frame = modal.querySelector(".frame");
-document.querySelectorAll(".video").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    frame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${btn.dataset.id}?autoplay=1&rel=0" title="EV International video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
-    modal.showModal();
+if (modal) {
+  const frame = modal.querySelector(".frame");
+  document.querySelectorAll(".video").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      frame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${btn.dataset.id}?autoplay=1&rel=0" title="EV International video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+      modal.showModal();
+    });
   });
-});
-modal.querySelector(".close").addEventListener("click", () => modal.close());
-modal.addEventListener("click", (e) => { if (e.target === modal) modal.close(); });
-modal.addEventListener("close", () => { frame.innerHTML = ""; });
+  modal.querySelector(".close").addEventListener("click", () => modal.close());
+  modal.addEventListener("click", (e) => { if (e.target === modal) modal.close(); });
+  modal.addEventListener("close", () => { frame.innerHTML = ""; });
+}
