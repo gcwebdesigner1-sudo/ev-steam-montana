@@ -1,6 +1,8 @@
-# EV Steam Montana
+# EV of Montana
 
-Informational landing page for the Montana EV International door-to-door team. It explains the EV Atlantis X dry steam cleaner, links the manufacturer's how-to videos, and sends visitors to call or text Anthony.
+Landing page for EV of Montana, the Montana EV International team. Its main job is to get people to book a free in-home tile & grout cleaning, where Anthony demonstrates the EV Atlantis steam cleaner. It also explains the machine and links the manufacturer's how-to videos for owners.
+
+The booking form opens a pre-written text to Anthony. If you bump `styles.css` or `script.js`, also bump the `?v=` number on their tags in `index.html` so returning visitors get the new file.
 
 Plain HTML/CSS/JS, no build step. Open `index.html` in a browser to preview.
 

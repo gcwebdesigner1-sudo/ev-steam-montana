@@ -12,9 +12,9 @@ document.getElementById("demo-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const f = new FormData(e.target);
   const body =
-    `Hi Anthony, this is ${f.get("name")} in ${f.get("town")}. ` +
-    `I'd like to learn more about the EV steam cleaner (${f.get("interest")}).` +
-    (f.get("when") ? ` Best time to reach me: ${f.get("when")}.` : "");
+    `Hi Anthony, this is ${f.get("name")} in ${f.get("town")} (${f.get("phone")}). ` +
+    `I'd like to book a free cleaning: ${f.get("interest")}.` +
+    (f.get("when") ? ` Best days/times: ${f.get("when")}.` : "");
   window.location.href = `sms:${PHONE_E164}?&body=${encodeURIComponent(body)}`;
 });
 

@@ -129,6 +129,10 @@ p { margin: 0 0 1em; }
 .contact .section-lead { color: #a9bfd3; }
 .contact-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
 .contact-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.book-points { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 10px; color: #fff; font-weight: 500; }
+.book-points li::before { content: "✓"; color: var(--blue); font-weight: 700; margin-right: 10px; }
+.offer-cta { text-align: center; margin-top: 36px; }
+.nowrap { white-space: nowrap; }
 .contact .btn-ghost { color: #fff; }
 .demo-form { background: #fff; color: var(--text); border-radius: 20px; padding: 28px; display: grid; gap: 14px; }
 .form-title { font: 700 1.2rem var(--head); color: var(--ink); margin: 0; }
