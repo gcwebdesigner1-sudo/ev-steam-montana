@@ -35,7 +35,13 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
 document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
-// Video modal with YouTube's privacy-enhanced embed (details page only).
+// Show the phone's sticky "Book" button only after scrolling past the photo cover.
+const cover = document.querySelector(".cover");
+if (cover) {
+  new IntersectionObserver(([en]) => document.body.classList.toggle("past-cover", !en.isIntersecting), { threshold: 0.05 }).observe(cover);
+}
+
+// Video modal with YouTube's privacy-enhanced embed.
 const modal = document.getElementById("video-modal");
 if (modal) {
   const frame = modal.querySelector(".frame");
