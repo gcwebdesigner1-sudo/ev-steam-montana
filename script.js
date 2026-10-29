@@ -12,15 +12,19 @@ document.querySelectorAll(".js-ask").forEach((a) => {
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 
-// "Request a demo" builds a text message instead of posting to a server.
+// The quote form builds a text (phones) or an email (computers) instead of posting to a server.
+const EMAIL = "evofmt@gmail.com";
+const isPhone = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 document.getElementById("demo-form")?.addEventListener("submit", (e) => {
   e.preventDefault();
   const f = new FormData(e.target);
   const body =
     `Hi Anthony, this is ${f.get("name")} in ${f.get("town")} (${f.get("phone")}). ` +
-    `I'd like to book a free demo cleaning: ${f.get("interest")}.` +
+    `I'd like a free quote: ${f.get("interest")}.` +
     (f.get("when") ? ` Best days/times: ${f.get("when")}.` : "");
-  window.location.href = `sms:${PHONE_E164}?&body=${encodeURIComponent(body)}`;
+  window.location.href = isPhone
+    ? `sms:${PHONE_E164}?&body=${encodeURIComponent(body)}`
+    : `mailto:${EMAIL}?subject=${encodeURIComponent("Free quote request")}&body=${encodeURIComponent(body)}`;
 });
 
 // Mobile menu.

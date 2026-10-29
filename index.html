@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=12">
+  <link rel="stylesheet" href="styles.css?v=13">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body class="home">
@@ -28,8 +28,8 @@
       </div>
       <a href="index.html" class="brand">EV of Montana</a>
       <div class="nav-side nav-right">
-        <a href="#faq">FAQ</a>
-        <a class="nav-cta" href="#demo">Free demo</a>
+        <a class="js-tel" href="tel:+14066778967"><span class="js-phone">(406) 677-8967</span></a>
+        <a class="nav-cta" href="#demo">Free quote</a>
       </div>
       <button class="burger" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
     </nav>
@@ -40,7 +40,7 @@
     <a href="#cleans">What it cleans</a>
     <a href="#lineup">All EV products</a>
     <a href="#videos">How-to videos</a>
-    <a href="#demo">Free demo cleaning</a>
+    <a href="#demo">Free quote &amp; demo</a>
     <a href="#owners">For owners</a>
     <a href="#faq">FAQ</a>
     <a href="https://www.instagram.com/evofmt/" target="_blank" rel="noopener">Instagram</a>
@@ -53,7 +53,11 @@
       <div class="cover-shade" aria-hidden="true"></div>
       <div class="cover-content">
         <h1 class="cover-title">EV ATLANTIS</h1>
-        <a class="btn btn-primary" href="https://www.youtube.com/@EV-international" target="_blank" rel="noopener">How to use it <span class="btn-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a>
+        <div class="cover-actions">
+          <a class="btn btn-primary" href="#demo">Get a free quote <span class="btn-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a>
+          <a class="btn btn-ghost js-tel" href="tel:+14066778967"><span class="btn-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>Call <span class="js-phone">(406) 677-8967</span></a>
+        </div>
+        <a class="cover-link" href="https://www.youtube.com/@EV-international" target="_blank" rel="noopener">How to use it ↗</a>
       </div>
     </section>
 
@@ -302,8 +306,8 @@
       <div class="glow glow-c" aria-hidden="true"></div>
       <div class="wrap two-col demo-grid">
         <div class="reveal">
-          <span class="pill">Free in-home demo</span>
-          <h2>See the Atlantis X on your own home. Free.</h2>
+          <span class="pill">Free quote &amp; demo</span>
+          <h2>Get a free quote or schedule a demo.</h2>
           <p class="section-lead">We'll bring the Atlantis X to you and steam-clean your tile and grout, a shower, a backsplash or whatever spot you pick. You see what it does on your own surfaces, with no cost and no obligation.</p>
           <ol class="steps">
             <li><b>Book a time</b><span>Use the form or call or text Anthony.</span></li>
@@ -315,12 +319,15 @@
         </div>
         <div class="bezel bezel-dark reveal">
           <form class="bezel-core form-core" id="demo-form">
-            <p class="form-title">Request a free demo cleaning</p>
+            <p class="form-title">Get your free quote</p>
             <label>Your name<input name="name" required autocomplete="name"></label>
             <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
             <label>Town<input name="town" required placeholder="Missoula, Billings, Kalispell..."></label>
-            <label>What should we clean?
+            <label>What do you need?
               <select name="interest">
+                <option>A free demo cleaning at my home</option>
+                <option>A quote on an EV steam cleaner</option>
+                <option>A quote for my business</option>
                 <option>Tile &amp; grout</option>
                 <option>Shower or tub</option>
                 <option>Kitchen backsplash or counters</option>
@@ -331,7 +338,7 @@
             </label>
             <label>Best days / times<input name="when" placeholder="Weekday evenings, Saturday morning..."></label>
             <button class="btn btn-primary btn-full" type="submit">Send my request <span class="btn-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
-            <p class="form-note">This opens a pre-written text to Anthony on your phone. Nothing is sent until you hit send.</p>
+            <p class="form-note">On a phone this opens a pre-written text to Anthony. On a computer it opens a pre-written email. Nothing is sent until you hit send.</p>
           </form>
         </div>
       </div>
@@ -392,13 +399,16 @@
     </div>
   </footer>
 
-  <a class="sticky-cta" href="#demo">Book a free demo cleaning</a>
+  <div class="sticky-cta">
+    <a class="sticky-call js-tel" href="tel:+14066778967">Call</a>
+    <a class="sticky-quote" href="#demo">Get a free quote</a>
+  </div>
 
   <dialog class="video-modal" id="video-modal">
     <button class="close" type="button" aria-label="Close video">×</button>
     <div class="frame"></div>
   </dialog>
 
-  <script src="script.js?v=12"></script>
+  <script src="script.js?v=13"></script>
 </body>
 </html>
