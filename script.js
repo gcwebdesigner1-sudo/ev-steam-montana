@@ -5,6 +5,10 @@ const PHONE_E164 = "+14066778967";
 document.querySelectorAll(".js-tel").forEach((a) => (a.href = `tel:${PHONE_E164}`));
 document.querySelectorAll(".js-sms").forEach((a) => (a.href = `sms:${PHONE_E164}`));
 document.querySelectorAll(".js-phone").forEach((el) => (el.textContent = PHONE_DISPLAY));
+// "Ask Anthony about it" on each product opens a text that names the machine.
+document.querySelectorAll(".js-ask").forEach((a) => {
+  a.href = `sms:${PHONE_E164}?&body=${encodeURIComponent(`Hi Anthony, I'm interested in the ${a.dataset.product}. Can you tell me more?`)}`;
+});
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 
