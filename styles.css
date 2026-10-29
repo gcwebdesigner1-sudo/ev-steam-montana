@@ -220,6 +220,9 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round
 .steps span { font-size: .95rem; }
 .call-line { color: #cfe6f6; font-size: .95rem; text-decoration: none; border-bottom: 1px solid rgba(207,230,246,.3); padding-bottom: 2px; }
 .call-line:hover { color: #fff; border-color: #fff; }
+.contact-links { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 18px; font-size: .95rem; }
+.contact-links a { color: #cfe6f6; text-decoration: none; border-bottom: 1px solid rgba(207,230,246,.3); padding-bottom: 2px; }
+.contact-links a:hover { color: #fff; border-color: #fff; }
 .form-core { padding: 32px; display: grid; gap: 16px; }
 .form-title { color: #fff; font-size: 1.3rem; font-weight: 600; letter-spacing: -0.02em; margin: 0 0 4px; }
 .form-core label { display: grid; gap: 7px; font-size: .82rem; color: #8ea3b7; font-weight: 500; }

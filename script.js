@@ -1,6 +1,6 @@
 // Change Anthony's number here; every call/text button on the page uses it.
-const PHONE_DISPLAY = "(406) 203-8740";
-const PHONE_E164 = "+14062038740";
+const PHONE_DISPLAY = "(406) 677-8967";
+const PHONE_E164 = "+14066778967";
 
 document.querySelectorAll(".js-tel").forEach((a) => (a.href = `tel:${PHONE_E164}`));
 document.querySelectorAll(".js-sms").forEach((a) => (a.href = `sms:${PHONE_E164}`));
